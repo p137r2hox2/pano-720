@@ -128,6 +128,46 @@
     return [f.r, f.l, f.u, f.d, f.f, f.b];
   }
 
+  // 一张一张加载六面图，带 3 次重试（弱网/国外 CDN 抗干扰）
+  function loadCubeSerial(urls, onProgress) {
+    return new Promise(function (resolve, reject) {
+      var images = new Array(urls.length);
+      var i = 0;
+
+      function next() {
+        if (i >= urls.length) {
+          var tex = new THREE.CubeTexture(images);
+          tex.needsUpdate = true;
+          resolve(tex);
+          return;
+        }
+        var idx = i;
+        var tries = 0;
+        (function attempt() {
+          var img = new Image();
+          img.crossOrigin = 'anonymous';
+          img.onload = function () {
+            images[idx] = img;
+            i++;
+            if (onProgress) onProgress(i, urls.length);
+            setTimeout(next, 30);
+          };
+          img.onerror = function () {
+            tries++;
+            if (tries < 4) {
+              setTimeout(attempt, 700 * tries);
+            } else {
+              reject(new Error('六面图加载失败'));
+            }
+          };
+          var sep = urls[idx].indexOf('?') >= 0 ? '&' : '?';
+          img.src = urls[idx] + (tries ? sep + '_r=' + tries : '');
+        })();
+      }
+      next();
+    });
+  }
+
   function openScene(idx, first) {
     if (S.busy) return;
     S.busy = true;
@@ -135,17 +175,12 @@
     els.loadingText.textContent = first ? '正在加载全景…' : (sc.title || '加载中…');
     if (first) els.loading.classList.remove('hide');
 
-    var loader = new THREE.CubeTextureLoader();
-    loader.setCrossOrigin('anonymous');
     var urls = faceUrls(sc);
 
-    var done = 0;
-    function progress() {
-      done++;
-      if (!first) els.loadingText.textContent = (sc.title || '') + ' ' + Math.round(done / 6 * 100) + '%';
-    }
-
-    loader.load(urls, function (tex) {
+    // 串行加载（一张接一张，带重试）：国外 CDN / 弱网下并发拉 6 张会被重置，串行成功率高很多
+    loadCubeSerial(urls, function (n, total) {
+      if (!first) els.loadingText.textContent = (sc.title || '') + ' ' + Math.round(n / total * 100) + '%';
+    }).then(function (tex) {
       if (THREE.sRGBEncoding !== undefined) tex.encoding = THREE.sRGBEncoding;
       tex.minFilter = THREE.LinearFilter;
       tex.magFilter = THREE.LinearFilter;
@@ -167,9 +202,9 @@
 
       els.loading.classList.add('hide');
       setTimeout(function () { hideHint(); }, 3200);
-    }, progress, function (err) {
+    }).catch(function (err) {
       S.busy = false;
-      els.loadingText.textContent = '图片加载失败：' + (sc.title || '') + '（请检查 panos 目录）';
+      els.loadingText.textContent = '图片加载失败：' + (sc.title || '') + '（' + (err && err.message ? err.message : '网络') + '）';
       console.error('load fail', sc, err);
       els.loading.classList.remove('hide');
     });
