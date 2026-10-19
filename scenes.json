@@ -1,0 +1,309 @@
+{
+  "title": "[全景]盈悦华府6栋A1502",
+  "panoId": "148917456",
+  "source": "https://720.3vjia.com/S148917456",
+  "width": 1500,
+  "startScene": "scene336813",
+  "map": "assets/map.png",
+  "logo": "assets/logo.png",
+  "tel": "13922534380",
+  "designername": "sva02",
+  "scenes": [
+    {
+      "id": "scene360299",
+      "title": "餐厅",
+      "dir": "panos/01-餐厅/",
+      "lat": 25.5,
+      "lng": 63,
+      "faces": {
+        "l": "panos/01-餐厅/show_l.jpg",
+        "f": "panos/01-餐厅/show_f.jpg",
+        "r": "panos/01-餐厅/show_r.jpg",
+        "b": "panos/01-餐厅/show_b.jpg",
+        "u": "panos/01-餐厅/show_u.jpg",
+        "d": "panos/01-餐厅/show_d.jpg"
+      },
+      "hotspots": [
+        {
+          "ath": -73.27996849019513,
+          "atv": 3.1787572079582,
+          "next": "scene336813",
+          "type": "thedoor",
+          "style": "hs_001"
+        }
+      ]
+    },
+    {
+      "id": "scene119",
+      "title": "客卧",
+      "dir": "panos/02-客卧/",
+      "lat": 63.166666666666664,
+      "lng": 65.5,
+      "faces": {
+        "l": "panos/02-客卧/show_l.jpg",
+        "f": "panos/02-客卧/show_f.jpg",
+        "r": "panos/02-客卧/show_r.jpg",
+        "b": "panos/02-客卧/show_b.jpg",
+        "u": "panos/02-客卧/show_u.jpg",
+        "d": "panos/02-客卧/show_d.jpg"
+      },
+      "hotspots": [
+        {
+          "ath": -92.80824707281238,
+          "atv": 2.4319059147971576,
+          "next": "scene360300",
+          "type": "thedoor",
+          "style": "hs_001"
+        }
+      ]
+    },
+    {
+      "id": "scene115",
+      "title": "书房",
+      "dir": "panos/03-书房/",
+      "lat": 52.666666666666664,
+      "lng": 40.625,
+      "faces": {
+        "l": "panos/03-书房/show_l.jpg",
+        "f": "panos/03-书房/show_f.jpg",
+        "r": "panos/03-书房/show_r.jpg",
+        "b": "panos/03-书房/show_b.jpg",
+        "u": "panos/03-书房/show_u.jpg",
+        "d": "panos/03-书房/show_d.jpg"
+      },
+      "hotspots": [
+        {
+          "ath": 29.88497078676278,
+          "atv": 4.386536754054419,
+          "next": "scene121",
+          "type": "thedoor",
+          "style": "hs_001"
+        },
+        {
+          "ath": 175.92181079336967,
+          "atv": -2.8080790402599516,
+          "next": "scene360300",
+          "type": "thedoor",
+          "style": "hs_001"
+        }
+      ]
+    },
+    {
+      "id": "scene336813",
+      "title": "客厅",
+      "dir": "panos/04-客厅/",
+      "lat": 30.333333333333332,
+      "lng": 33.625,
+      "faces": {
+        "l": "panos/04-客厅/show_l.jpg",
+        "f": "panos/04-客厅/show_f.jpg",
+        "r": "panos/04-客厅/show_r.jpg",
+        "b": "panos/04-客厅/show_b.jpg",
+        "u": "panos/04-客厅/show_u.jpg",
+        "d": "panos/04-客厅/show_d.jpg"
+      },
+      "hotspots": [
+        {
+          "ath": 90.6949852029316,
+          "atv": 0.7196800184417029,
+          "next": "scene360299",
+          "type": "thedoor",
+          "style": "hs_001"
+        },
+        {
+          "ath": 44.02096561719975,
+          "atv": 2.628852086957337,
+          "next": "scene360300",
+          "type": "thedoor",
+          "style": "hs_001"
+        }
+      ]
+    },
+    {
+      "id": "scene114",
+      "title": "主卫",
+      "dir": "panos/05-主卫/",
+      "lat": 69,
+      "lng": 32.25,
+      "faces": {
+        "l": "panos/05-主卫/show_l.jpg",
+        "f": "panos/05-主卫/show_f.jpg",
+        "r": "panos/05-主卫/show_r.jpg",
+        "b": "panos/05-主卫/show_b.jpg",
+        "u": "panos/05-主卫/show_u.jpg",
+        "d": "panos/05-主卫/show_d.jpg"
+      },
+      "hotspots": [
+        {
+          "ath": -93.92578151381628,
+          "atv": 12.069895443037405,
+          "next": "scene202",
+          "type": "thedoor",
+          "style": "hs_001"
+        }
+      ]
+    },
+    {
+      "id": "scene360300",
+      "title": "过道",
+      "dir": "panos/06-过道/",
+      "lat": 50.666666666666664,
+      "lng": 54.375,
+      "faces": {
+        "l": "panos/06-过道/show_l.jpg",
+        "f": "panos/06-过道/show_f.jpg",
+        "r": "panos/06-过道/show_r.jpg",
+        "b": "panos/06-过道/show_b.jpg",
+        "u": "panos/06-过道/show_u.jpg",
+        "d": "panos/06-过道/show_d.jpg"
+      },
+      "hotspots": [
+        {
+          "ath": 66.71784213352669,
+          "atv": 5.366109478354315,
+          "next": "scene336813",
+          "type": "thedoor",
+          "style": "hs_001"
+        },
+        {
+          "ath": -21.17361344201396,
+          "atv": 4.5080479425816815,
+          "next": "scene192",
+          "type": "thedoor",
+          "style": "hs_001"
+        },
+        {
+          "ath": -127.2158676549852,
+          "atv": 4.957804511406226,
+          "next": "scene202",
+          "type": "thedoor",
+          "style": "hs_001"
+        },
+        {
+          "ath": -106.96434874029484,
+          "atv": 4.950158671353968,
+          "next": "scene120",
+          "type": "thedoor",
+          "style": "hs_001"
+        },
+        {
+          "ath": -69.88442317358948,
+          "atv": 7.923729778738592,
+          "next": "scene119",
+          "type": "thedoor",
+          "style": "hs_001"
+        },
+        {
+          "ath": -140.3308458995515,
+          "atv": 9.583449155052712,
+          "next": "scene115",
+          "type": "thedoor",
+          "style": "hs_001"
+        }
+      ]
+    },
+    {
+      "id": "scene120",
+      "title": "次卧",
+      "dir": "panos/07-次卧/",
+      "lat": 81.16666666666667,
+      "lng": 60.25,
+      "faces": {
+        "l": "panos/07-次卧/show_l.jpg",
+        "f": "panos/07-次卧/show_f.jpg",
+        "r": "panos/07-次卧/show_r.jpg",
+        "b": "panos/07-次卧/show_b.jpg",
+        "u": "panos/07-次卧/show_u.jpg",
+        "d": "panos/07-次卧/show_d.jpg"
+      },
+      "hotspots": [
+        {
+          "ath": -96.78907257003027,
+          "atv": 0.9703659713209183,
+          "next": "scene360300",
+          "type": "thedoor",
+          "style": "hs_001"
+        }
+      ]
+    },
+    {
+      "id": "scene202",
+      "title": "主卧",
+      "dir": "panos/08-主卧/",
+      "lat": 86.33333333333333,
+      "lng": 39.25,
+      "faces": {
+        "l": "panos/08-主卧/show_l.jpg",
+        "f": "panos/08-主卧/show_f.jpg",
+        "r": "panos/08-主卧/show_r.jpg",
+        "b": "panos/08-主卧/show_b.jpg",
+        "u": "panos/08-主卧/show_u.jpg",
+        "d": "panos/08-主卧/show_d.jpg"
+      },
+      "hotspots": [
+        {
+          "ath": 126.54997988914849,
+          "atv": 2.5217168907533654,
+          "next": "scene360300",
+          "type": "thedoor",
+          "style": "hs_001"
+        },
+        {
+          "ath": 167.8316238236351,
+          "atv": 1.7827437681850715,
+          "next": "scene114",
+          "type": "thedoor",
+          "style": "hs_001"
+        }
+      ]
+    },
+    {
+      "id": "scene192",
+      "title": "公卫",
+      "dir": "panos/09-公卫/",
+      "lat": 48.166666666666664,
+      "lng": 66.375,
+      "faces": {
+        "l": "panos/09-公卫/show_l.jpg",
+        "f": "panos/09-公卫/show_f.jpg",
+        "r": "panos/09-公卫/show_r.jpg",
+        "b": "panos/09-公卫/show_b.jpg",
+        "u": "panos/09-公卫/show_u.jpg",
+        "d": "panos/09-公卫/show_d.jpg"
+      },
+      "hotspots": [
+        {
+          "ath": 132.4676423046082,
+          "atv": 3.903728614308498,
+          "next": "scene360300",
+          "type": "thedoor",
+          "style": "hs_001"
+        }
+      ]
+    },
+    {
+      "id": "scene121",
+      "title": "生活阳台",
+      "dir": "panos/10-生活阳台/",
+      "lat": 51.666666666666664,
+      "lng": 21.5,
+      "faces": {
+        "l": "panos/10-生活阳台/show_l.jpg",
+        "f": "panos/10-生活阳台/show_f.jpg",
+        "r": "panos/10-生活阳台/show_r.jpg",
+        "b": "panos/10-生活阳台/show_b.jpg",
+        "u": "panos/10-生活阳台/show_u.jpg",
+        "d": "panos/10-生活阳台/show_d.jpg"
+      },
+      "hotspots": [
+        {
+          "ath": 109.37473783343202,
+          "atv": 4.583293616049806,
+          "next": "scene115",
+          "type": "thedoor",
+          "style": "hs_001"
+        }
+      ]
+    }
+  ]
+}

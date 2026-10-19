@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>720°全景</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="css/viewer.css">
+</head>
+<body>
+<div id="app">
+  <canvas id="pano"></canvas>
+  <div id="hotspots"></div>
+
+  <header id="topbar">
+    <div class="brand">
+      <img id="logo" src="assets/logo.png" alt="">
+      <span id="title">720°全景</span>
+    </div>
+    <div class="tools">
+      <button class="tool" id="btn-rotate" title="自动旋转">
+        <svg viewBox="0 0 24 24"><path d="M12 5V2L7 6l5 4V7a5 5 0 1 1-5 5H5a7 7 0 1 0 7-7z"/></svg>
+      </button>
+      <button class="tool" id="btn-map" title="户型图">
+        <svg viewBox="0 0 24 24"><path d="M3 5l6-2 6 2 6-2v16l-6 2-6-2-6 2V5zm6 0v16m6-14v16"/></svg>
+      </button>
+      <button class="tool" id="btn-full" title="全屏">
+        <svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+      </button>
+      <button class="tool" id="btn-share" title="分享">
+        <svg viewBox="0 0 24 24"><path d="M12 3v12M8 7l4-4 4 4M5 14v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div id="thumbs"></div>
+
+  <div id="hint">按住拖动查看全景 · 滚轮 / 双指缩放</div>
+
+  <div id="loading">
+    <div class="ring"></div>
+    <div id="loading-text">加载中…</div>
+  </div>
+
+  <div id="mapbox">
+    <div class="map-inner">
+      <img id="mapimg" src="assets/map.png" alt="户型图">
+      <div id="mappins"></div>
+    </div>
+    <button id="map-close">关闭</button>
+  </div>
+
+  <div id="toast"></div>
+</div>
+
+<script src="js/three.min.js"></script>
+<script src="js/viewer.js"></script>
+</body>
+</html>
